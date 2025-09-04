@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#"
+     xml:base="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco"/>
+    
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#apresenta_sintoma">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Sintoma"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#e_sintoma_de">
+        <owl:inverseOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#tem_como_sintoma"/>
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Sintoma"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#tem_como_sintoma">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Sintoma"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#possuiFatorDeRisco">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FatorDeRisco"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#temCondicao">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#recomendaTratamento">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Tratamento"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#temComplicação">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ComplicaçãoDiabetica"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#dataDeNascimento">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#principioAtivo">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Medicamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#temIMC">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#nivelSaudeGeral">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#diasSaudeMentalRuim">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#diasSaudeFisicaRuim">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#sexo">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#idade">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#nivelEducacional">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#faixaDeRenda">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Paciente"/>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Medicamento"/>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Tratamento"/>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ProcedimentoMedico"/>
+    
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#PreDiabetes">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Diabetes">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DiabetesTipo1">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Diabetes"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DiabetesTipo2">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Diabetes"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DiabetesGestacional">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Diabetes"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Hipertensao">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#AcidenteVascularCerebral">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DoencaCardiaca">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#COVID19">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+        <rdfs:label xml:lang="pt">COVID-19</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ComplicaçãoDiabetica"/>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#NeuropatiaDiabetica">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ComplicaçãoDiabetica"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#RetinopatiaDiabetica">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ComplicaçãoDiabetica"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FatorDeRisco"/>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ColesterolElevado">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FatorDeRisco"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Tabagismo">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FatorDeRisco"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#InatividadeFisica">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FatorDeRisco"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DietaNaoSaudavel">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FatorDeRisco"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Alcoolismo">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FatorDeRisco"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Sintoma"/>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DificuldadeDeLocomocao">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Sintoma"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#VerificacaoColesterol">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ProcedimentoMedico"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#TratamentoDiabetes">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Tratamento"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Insulinoterapia">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#TratamentoDiabetes"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#AntidiabeticoOral">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Medicamento"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#InsuficienciaCardiaca">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DoencaCardiaca"/>
+        <rdfs:label xml:lang="pt">Insuficiência Cardíaca</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ConsultaMedica">
+        <rdfs:label xml:lang="pt">Consulta Médica</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#IndicadorDeSaude">
+        <rdfs:label xml:lang="pt">Indicador de Saúde</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#EstatisticaDeSaude">
+        <rdfs:subClassOf rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#IndicadorDeSaude"/>
+        <rdfs:label xml:lang="pt">Estatística de Saúde</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados">
+        <rdfs:label xml:lang="pt">Fonte de Dados</rdfs:label>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#abordaTopico">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="pt">aborda tópico</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#eIndicadorDe">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#IndicadorDeSaude"/>
+        <rdfs:range rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#CondicaoMedica"/>
+        <rdfs:label xml:lang="pt">é indicador de</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#statusComparecimento">
+        <rdfs:domain rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ConsultaMedica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="pt">status de comparecimento</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <owl:NamedIndividual rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Dataset_Diabetes">
+        <rdf:type rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados"/>
+        <rdfs:label>Dataset de Diabetes (Pima Indians, etc.)</rdfs:label>
+        <abordaTopico rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Diabetes"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Dataset_InsuficienciaCardiaca">
+        <rdf:type rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados"/>
+        <rdfs:label>Dataset de Insuficiência Cardíaca</rdfs:label>
+        <abordaTopico rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#InsuficienciaCardiaca"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Dataset_IndicadoresDoencaCardiaca">
+        <rdf:type rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados"/>
+        <rdfs:label>Dataset de Indicadores Chave de Doença Cardíaca</rdfs:label>
+        <abordaTopico rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#DoencaCardiaca"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Dataset_AusenciaEmConsultas">
+        <rdf:type rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados"/>
+        <rdfs:label>Dataset de Ausência em Consultas (No Show Appointments)</rdfs:label>
+        <abordaTopico rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#ConsultaMedica"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Dataset_WHO_Statistics">
+        <rdf:type rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados"/>
+        <rdfs:label>Dataset de Estatísticas Mundiais de Saúde (WHO)</rdfs:label>
+        <abordaTopico rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#EstatisticaDeSaude"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#Dataset_COVID19">
+        <rdf:type rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#FonteDeDados"/>
+        <rdfs:label>Dataset de COVID-19</rdfs:label>
+        <abordaTopico rdf:resource="http://www.seuhospital.com/ontologias/predicao_risco_cardiaco#COVID19"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
